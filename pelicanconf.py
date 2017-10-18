@@ -3,14 +3,14 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Mike Stepanovic'
-SITENAME = "Mike Stepanovic's Blog"
+SITENAME = 'Mike Stepanovic'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'America/Los_Angeles'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'English'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -29,11 +29,13 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
+
+THEME='themes/pelican-themes/new-bootstrap2'
+
+PLUGIN_PATHS=['pelican-plugins','plugins']
+PLUGINS=['liquid_tags.notebook','ipynb.liquid',]
+STATIC=['notebooks']
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-MARKUP = ('md', 'ipynb')
-
-PLUGIN_PATH = './plugins'
-PLUGINS = ['ipynb.markup']
+RELATIVE_URLS = True
